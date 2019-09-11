@@ -1,13 +1,13 @@
 export const initialState = [
     {
       item: 'Learn about reducers',
-      completed: true,
+      completed: false,
       id: 3892987589,
     },
     {
       item: 'Finish todo list',
       completed: false,
-      id: 1,
+      id: 1568146979433,
     },
   ];
   
@@ -16,7 +16,7 @@ export const initialState = [
       case 'ADD_TODO':
         return [
           ...state,
-          { item: action.payload, completed: false, id: new Date() },
+          { item: action.payload, completed: false, id: Date.now() },
         ];
       case 'TOGGLE_TODO':
         return state.map(todo => {
@@ -24,8 +24,8 @@ export const initialState = [
             ? { ...todo, completed: !todo.completed }
             : todo;
         });
-        case 'CLEAR_COMPLETED':
-            return state.filter(todo => !todo.completed);
+      case 'CLEAR_COMPLETED':
+        return state.filter(todo => !todo.completed);
       default:
         return state;
     }
