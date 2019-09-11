@@ -87,7 +87,7 @@ button:active {
 
 .tag {
   display: inline-block;
-  background-color: #bb86fc;
+  background-color: orange;
   margin-top: 3px;
   margin-right: 7px;
   padding: 3px 1%;

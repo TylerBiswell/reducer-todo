@@ -40,7 +40,7 @@ export default function Todo(props) {
       </h2>
       <p
         style={{
-          color: `${Date.now() > Date.parse(dueDate) ? '#cf6679' : 'white'}`,
+          color: `${Date.now() > Date.parse(dueDate) ? '#8f8078' : 'white'}`,
         }}>
         Do By: {dueDate.toDateString()}{' '}
         {Date.now() > Date.parse(dueDate) && 'Overdue!'}
